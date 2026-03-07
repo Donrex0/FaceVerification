@@ -1,0 +1,101 @@
+{
+  "train_losses": [
+    0.009516996215097606,
+    0.008118427358567715,
+    0.008402256527915597,
+    0.008283433853648603
+  ],
+  "train_accuracies": [
+    0.5,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "val_losses": [
+    0.005781382787972689,
+    0.006541673559695482,
+    0.006121663376688957,
+    0.006116523407399654
+  ],
+  "val_accuracies": [
+    0.5,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "best_epoch": 0,
+  "best_val_loss": 0.005781382787972689,
+  "total_epochs": 4,
+  "config": {
+    "data": {
+      "data_dir": "data/lfw",
+      "pairs_file": "data/lfw/lfw_pairs.pkl",
+      "metadata_file": "data/lfw/metadata.pkl",
+      "image_size": [
+        160,
+        160
+      ],
+      "batch_size": 32,
+      "num_workers": 4,
+      "use_augmentation": true,
+      "horizontal_flip_prob": 0.5,
+      "rotation_degrees": 10,
+      "color_jitter": {
+        "brightness": 0.2,
+        "contrast": 0.2,
+        "saturation": 0.2,
+        "hue": 0.1
+      }
+    },
+    "model": {
+      "baseline_model_type": "standard",
+      "baseline_embedding_dim": 128,
+      "improved_model_type": "resnet50",
+      "improved_embedding_dim": 128,
+      "pretrained": true,
+      "freeze_backbone": false,
+      "loss_type": "contrastive",
+      "contrastive_margin": 2.0,
+      "triplet_margin": 0.2
+    },
+    "training": {
+      "baseline_epochs": 10,
+      "baseline_lr": 0.001,
+      "baseline_weight_decay": 0.0001,
+      "improved_epochs": 15,
+      "improved_lr": 0.0001,
+      "improved_weight_decay": 0.0001,
+      "optimizer": "adam",
+      "scheduler": "step",
+      "step_size": 5,
+      "gamma": 0.1,
+      "early_stopping": true,
+      "patience": 3,
+      "min_delta": 0.0001,
+      "save_best_only": true,
+      "checkpoint_dir": "checkpoints"
+    },
+    "evaluation": {
+      "compute_all_metrics": true,
+      "threshold_range": [
+        0.0,
+        1.0
+      ],
+      "threshold_steps": 100,
+      "save_plots": true,
+      "plot_dir": "experiments/plots",
+      "dpi": 300,
+      "save_results": true,
+      "results_dir": "experiments"
+    },
+    "experiment": {
+      "experiment_name": "face_verification_experiment",
+      "log_dir": "logs",
+      "seed": 42,
+      "device": "auto",
+      "mixed_precision": false,
+      "deterministic": true,
+      "benchmark": false
+    }
+  }
+}

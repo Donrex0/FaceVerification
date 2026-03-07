@@ -1,0 +1,10 @@
+{
+  "total_images": 160,
+  "num_identities": 20,
+  "avg_images_per_identity": 8.0,
+  "train_pairs": 128,
+  "test_pairs": 32,
+  "positive_pairs": 64,
+  "negative_pairs": 64,
+  "balance_ratio": 1.0
+}

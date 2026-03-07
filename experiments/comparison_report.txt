@@ -1,0 +1,63 @@
+================================================================================
+FACE VERIFICATION MODEL COMPARISON REPORT
+================================================================================
+
+MODEL OVERVIEW
+----------------------------------------
+Number of models compared: 2
+Models: baseline, improved
+
+BEST PERFORMANCE BY METRIC
+----------------------------------------
+Accuracy: baseline (0.7500)
+Precision: baseline (0.6667)
+Recall: baseline (1.0000)
+F1 Score: baseline (0.8000)
+Roc Auc: baseline (0.8242)
+Average Precision: baseline (0.8198)
+
+DETAILED COMPARISON TABLE
+----------------------------------------
+   Model  Accuracy  Precision  Recall  F1 Score  ROC AUC  Optimal Threshold  Optimal Sensitivity  Optimal Specificity  Average Precision  Total Pairs  Positive Pairs  Negative Pairs  Mean Similarity  Std Similarity  Pos Mean Similarity  Pos Std Similarity  Neg Mean Similarity  Neg Std Similarity
+baseline    0.7500     0.6667     1.0    0.8000   0.8242             0.7180               0.8750               0.6875             0.8198           32              16              16           0.7212          0.0902               0.7704              0.0415               0.6720              0.0985
+improved    0.5625     0.5333     1.0    0.6957   0.6406             0.9369               0.4375               0.8125             0.6789           32              16              16           0.9183          0.0304               0.9271              0.0237               0.9095              0.0336
+
+PERFORMANCE IMPROVEMENTS
+----------------------------------------
+Improved Model vs Baseline:
+
+Accuracy:
+  Baseline: 0.7500
+  Improved: 0.5625
+  Improvement: -25.00%
+
+Precision:
+  Baseline: 0.6667
+  Improved: 0.5333
+  Improvement: -20.00%
+
+Recall:
+  Baseline: 1.0000
+  Improved: 1.0000
+  Improvement: +0.00%
+
+F1 Score:
+  Baseline: 0.8000
+  Improved: 0.6957
+  Improvement: -13.04%
+
+ROC AUC:
+  Baseline: 0.8242
+  Improved: 0.6406
+  Improvement: -22.27%
+
+Average Precision:
+  Baseline: 0.8198
+  Improved: 0.6789
+  Improvement: -17.20%
+
+CONCLUSIONS
+----------------------------------------
+Average improvement across all metrics: -16.25%
+
+Overall best model: baseline (best in 6 metrics)

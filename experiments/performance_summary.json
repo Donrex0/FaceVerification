@@ -1,0 +1,58 @@
+{
+  "Best_Accuracy": {
+    "model": "baseline",
+    "value": 0.75
+  },
+  "Best_Precision": {
+    "model": "baseline",
+    "value": 0.6666666666666666
+  },
+  "Best_Recall": {
+    "model": "baseline",
+    "value": 1.0
+  },
+  "Best_F1_Score": {
+    "model": "baseline",
+    "value": 0.8
+  },
+  "Best_ROC_AUC": {
+    "model": "baseline",
+    "value": 0.82421875
+  },
+  "Best_Average_Precision": {
+    "model": "baseline",
+    "value": 0.8198465459978617
+  },
+  "improvements": {
+    "Accuracy": {
+      "baseline": 0.75,
+      "improved": 0.5625,
+      "improvement_percent": -25.0
+    },
+    "Precision": {
+      "baseline": 0.6666666666666666,
+      "improved": 0.5333333333333333,
+      "improvement_percent": -19.999999999999996
+    },
+    "Recall": {
+      "baseline": 1.0,
+      "improved": 1.0,
+      "improvement_percent": 0.0
+    },
+    "F1 Score": {
+      "baseline": 0.8,
+      "improved": 0.6956521739130435,
+      "improvement_percent": -13.043478260869573
+    },
+    "ROC AUC": {
+      "baseline": 0.82421875,
+      "improved": 0.640625,
+      "improvement_percent": -22.274881516587676
+    },
+    "Average Precision": {
+      "baseline": 0.8198465459978617,
+      "improved": 0.6788593564698275,
+      "improvement_percent": -17.196777886821987
+    }
+  }
+}

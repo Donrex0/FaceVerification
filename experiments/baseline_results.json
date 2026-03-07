@@ -1,0 +1,109 @@
+{
+  "train_losses": [
+    0.6891185492277145,
+    0.6593272984027863,
+    0.5130181759595871,
+    0.5053656175732613,
+    0.44761503487825394,
+    0.35531245172023773
+  ],
+  "train_accuracies": [
+    0.5,
+    0.5,
+    0.4140625,
+    0.375,
+    0.234375,
+    0.09375
+  ],
+  "val_losses": [
+    0.7094866037368774,
+    0.6147240400314331,
+    0.6038560271263123,
+    0.6946050524711609,
+    0.7147872447967529,
+    0.6956485509872437
+  ],
+  "val_accuracies": [
+    0.5,
+    0.5,
+    0.53125,
+    0.5,
+    0.53125,
+    0.71875
+  ],
+  "best_epoch": 2,
+  "best_val_loss": 0.6038560271263123,
+  "total_epochs": 6,
+  "config": {
+    "data": {
+      "data_dir": "data/lfw",
+      "pairs_file": "data/lfw/lfw_pairs.pkl",
+      "metadata_file": "data/lfw/metadata.pkl",
+      "image_size": [
+        160,
+        160
+      ],
+      "batch_size": 32,
+      "num_workers": 4,
+      "use_augmentation": true,
+      "horizontal_flip_prob": 0.5,
+      "rotation_degrees": 10,
+      "color_jitter": {
+        "brightness": 0.2,
+        "contrast": 0.2,
+        "saturation": 0.2,
+        "hue": 0.1
+      }
+    },
+    "model": {
+      "baseline_model_type": "standard",
+      "baseline_embedding_dim": 128,
+      "improved_model_type": "resnet50",
+      "improved_embedding_dim": 128,
+      "pretrained": true,
+      "freeze_backbone": false,
+      "loss_type": "contrastive",
+      "contrastive_margin": 2.0,
+      "triplet_margin": 0.2
+    },
+    "training": {
+      "baseline_epochs": 10,
+      "baseline_lr": 0.001,
+      "baseline_weight_decay": 0.0001,
+      "improved_epochs": 15,
+      "improved_lr": 0.0001,
+      "improved_weight_decay": 0.0001,
+      "optimizer": "adam",
+      "scheduler": "step",
+      "step_size": 5,
+      "gamma": 0.1,
+      "early_stopping": true,
+      "patience": 3,
+      "min_delta": 0.0001,
+      "save_best_only": true,
+      "checkpoint_dir": "checkpoints"
+    },
+    "evaluation": {
+      "compute_all_metrics": true,
+      "threshold_range": [
+        0.0,
+        1.0
+      ],
+      "threshold_steps": 100,
+      "save_plots": true,
+      "plot_dir": "experiments/plots",
+      "dpi": 300,
+      "save_results": true,
+      "results_dir": "experiments"
+    },
+    "experiment": {
+      "experiment_name": "face_verification_experiment",
+      "log_dir": "logs",
+      "seed": 42,
+      "device": "auto",
+      "mixed_precision": false,
+      "deterministic": true,
+      "benchmark": false
+    }
+  }
+}
